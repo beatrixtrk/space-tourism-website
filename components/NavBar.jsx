@@ -1,7 +1,9 @@
 'use client';
-import { Link, link } from '@nextui-org/react';
+import { useState } from 'react';
+import { Link } from '@nextui-org/react';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
+import { Fade as Hamburger } from 'hamburger-react';
 
 const pages = [
 	{
@@ -26,35 +28,53 @@ const pages = [
 	},
 ];
 
+// const NavBar = () => {
 const NavBar = ({ containerStyle, linkStyle, underlineStyle }) => {
 	const path = usePathname();
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setIsMenuOpen(!isMenuOpen);
+	};
 
 	return (
-		<nav className={`${containerStyle}`}>
-			{pages.map((page, index) => {
-				return (
-					<Link
-						className={`${linkStyle}`}
-						href={page.path}
-						key={index}
-					>
-						<span className="hidden lg:flex pr-3 font-bold">
-							{page.id}
-						</span>
-						{page.name}
-						{page.path === path && (
-							<motion.span
-								initial={{ y: '-100%' }}
-								animate={{ y: 0 }}
-								transition={{ type: 'tween' }}
-								layoutId="underline"
-								className={`${underlineStyle}`}
-							/>
-						)}
-					</Link>
-				);
-			})}
-		</nav>
+		<>
+			<Hamburger
+				color="#FFFFFF"
+				toggled={isMenuOpen}
+				toggle={setIsMenuOpen}
+				duration={0.8}
+			/>
+			<nav
+				className={`${containerStyle} ${
+					isMenuOpen ? 'navbar-open' : ''
+				}`}
+			>
+				{pages.map((page, index) => {
+					return (
+						<Link
+							className={`${linkStyle}`}
+							href={page.path}
+							key={index}
+						>
+							<span className="flex md:hidden lg:flex pr-3 font-bold">
+								{page.id}
+							</span>
+							{page.name}
+							{page.path === path && (
+								<motion.span
+									initial={{ y: '-100%' }}
+									animate={{ y: 0 }}
+									transition={{ type: 'tween' }}
+									layoutId="underline"
+									className={`${underlineStyle} hidden md:block`}
+								/>
+							)}
+						</Link>
+					);
+				})}
+			</nav>
+		</>
 	);
 };
 

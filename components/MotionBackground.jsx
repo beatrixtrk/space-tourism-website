@@ -8,7 +8,7 @@ const MotionBackground = ({ backgroundImage, backgroundPositon }) => {
 			initial={{ x: '0%', y: '-10%' }}
 			animate={{ x: '0%', y: ['-10%', '0%', '-10%'] }}
 			transition={{
-				duration: 30,
+				duration: 0,
 				ease: 'easeInOut',
 				repeat: Infinity,
 				repeatType: 'reverse',
