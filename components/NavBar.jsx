@@ -1,0 +1,61 @@
+'use client';
+import { Link, link } from '@nextui-org/react';
+import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
+
+const pages = [
+	{
+		id: '00',
+		name: 'Home',
+		path: '/',
+	},
+	{
+		id: '01',
+		name: 'Destination',
+		path: '/destination',
+	},
+	{
+		id: '02',
+		name: 'Crew',
+		path: '/crew',
+	},
+	{
+		id: '03',
+		name: 'Technology',
+		path: '/technology',
+	},
+];
+
+const NavBar = ({ containerStyle, linkStyle, underlineStyle }) => {
+	const path = usePathname();
+
+	return (
+		<nav className={`${containerStyle}`}>
+			{pages.map((page, index) => {
+				return (
+					<Link
+						className={`${linkStyle}`}
+						href={page.path}
+						key={index}
+					>
+						<span className="hidden lg:flex pr-3 font-bold">
+							{page.id}
+						</span>
+						{page.name}
+						{page.path === path && (
+							<motion.span
+								initial={{ y: '-100%' }}
+								animate={{ y: 0 }}
+								transition={{ type: 'tween' }}
+								layoutId="underline"
+								className={`${underlineStyle}`}
+							/>
+						)}
+					</Link>
+				);
+			})}
+		</nav>
+	);
+};
+
+export default NavBar;
