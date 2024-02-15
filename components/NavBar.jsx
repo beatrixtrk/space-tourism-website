@@ -28,14 +28,10 @@ const pages = [
 	},
 ];
 
-// const NavBar = () => {
 const NavBar = ({ containerStyle, linkStyle, underlineStyle }) => {
 	const path = usePathname();
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	const toggleMenu = () => {
-		setIsMenuOpen(!isMenuOpen);
-	};
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	return (
 		<>
@@ -55,7 +51,7 @@ const NavBar = ({ containerStyle, linkStyle, underlineStyle }) => {
 						<Link
 							className={`${linkStyle}`}
 							href={page.path}
-							key={index}
+							key={`nav-${index}`}
 						>
 							<span className="flex md:hidden lg:flex pr-3 font-bold">
 								{page.id}
@@ -63,10 +59,11 @@ const NavBar = ({ containerStyle, linkStyle, underlineStyle }) => {
 							{page.name}
 							{page.path === path && (
 								<motion.span
+									key={`nav-${path}`}
 									initial={{ y: '-100%' }}
 									animate={{ y: 0 }}
 									transition={{ type: 'tween' }}
-									layoutId="underline"
+									layoutId="navUnderline"
 									className={`${underlineStyle} hidden md:block`}
 								/>
 							)}

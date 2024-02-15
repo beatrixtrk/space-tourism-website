@@ -8,7 +8,7 @@ const MotionBackground = ({ backgroundImage, backgroundPositon }) => {
 			initial={{ x: '0%', y: '-10%' }}
 			animate={{ x: '0%', y: ['-10%', '0%', '-10%'] }}
 			transition={{
-				duration: 0,
+				duration: 30,
 				ease: 'easeInOut',
 				repeat: Infinity,
 				repeatType: 'reverse',
@@ -16,7 +16,7 @@ const MotionBackground = ({ backgroundImage, backgroundPositon }) => {
 			style={{
 				height: '120vh',
 			}}
-			className={`min-h-screen bg-no-repeat bg-cover static z-0 ${backgroundImage} ${backgroundPositon}`}
+			className={`min-h-screen bg-no-repeat bg-cover absolute top:0 md:top-[-10%] right-0 w-full z-0 ${backgroundImage} ${backgroundPositon}`}
 		/>
 	);
 };

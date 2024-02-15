@@ -21,7 +21,7 @@
     z-index: 5;
     display: none;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
        display: block;
     }
 }
@@ -71,6 +71,30 @@
     }
 }
 
-.mobile-menu{
+.h1{
+    @apply text-white font-Bellefair text-[80px] md:text-[150px] uppercase
+}
 
+.h2{
+    @apply text-white font-Bellefair text-[36px] md:text-[80px] lg:text-[100px] uppercase
+}
+
+.h5{
+    @apply text-base text-light font-BarlowCondensed md:text-xl lg:text-[28px]
+}
+
+.subtitle{
+    @apply text-base text-white font-BarlowCondensed font-normal tracking-[5px] md:text-xl lg:text-[28px] uppercase mb-8 md:mb-[60px] lg:mb-16
+}
+
+.subtitle span{
+    @apply opacity-25 font-bold mr-7   
+}
+
+.subheading-1{
+    @apply font-Bellefair text-[20px] text-white uppercase mb-2
+}
+
+.subheading-2{
+    @apply font-BarlowCondensed text-sm text-light tracking-[2px] uppercase mb-3
 }
