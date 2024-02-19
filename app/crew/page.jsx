@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { Pagination } from '@nextui-org/react';
 
 const Crew = () => {
-	const [jsonData, setJsonData] = useState(null);
-	const [activeTab, setActiveTab] = useState(0);
+	const [crewData, setCrewData] = useState(null);
+	const [activeTab, setActiveTab] = useState(null);
 
 	const renderItem = ({ ref, key, value, isActive, setPage, className }) => {
 		return (
@@ -29,7 +29,7 @@ const Crew = () => {
 		const fetchData = async () => {
 			const response = await fetch('/data.json');
 			const data = await response.json();
-			setJsonData(data);
+			setCrewData(data);
 		};
 		fetchData();
 	}, []);
@@ -40,16 +40,16 @@ const Crew = () => {
 				backgroundPositon="bg-top"
 			/>
 
-			<div className="min-h-screen relative container mx-auto flex flex-col justify-end">
+			<div className="main-container relative container mx-auto flex flex-col justify-end">
 				<div className="w-full text-center lg:flex lg:justify-between">
 					<h5 className="subtitle">
 						<span>02</span>Meet your crew
 					</h5>
 				</div>
-				{jsonData && (
+				{crewData && (
 					<div className="flex items-end">
-						{jsonData.crew &&
-							jsonData.crew.map((person, index) => (
+						{crewData.crew &&
+							crewData.crew.map((person, index) => (
 								<div
 									className={`flex flex-col justify-center items-center text-center lg:flex-row lg:items-end lg:justify-between lg:text-left w-full ${
 										activeTab === index ? '' : 'hidden'
@@ -66,7 +66,7 @@ const Crew = () => {
 										<Pagination
 											page={activeTab + 1}
 											onChange={handleSetActiveTab}
-											total={jsonData.crew.length}
+											total={crewData.crew.length}
 											radius="full"
 											size="sm"
 											renderItem={renderItem}

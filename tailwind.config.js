@@ -22,7 +22,8 @@ module.exports = {
         colors: {
             'dark': '#0B0D17',
             'light': '#D0D6F9',
-            'white': '#FFFFFF'
+            'white': '#FFFFFF',
+            'transparent': 'transparent'
         },
         extend: {
             backgroundColor: {

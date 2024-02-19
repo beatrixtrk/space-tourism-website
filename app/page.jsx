@@ -8,7 +8,7 @@ export default function Home() {
 				backgroundImage="bg-homeMobile md:bg-homeTablet lg:bg-homeDesktop"
 				backgroundPositon="bg-bottom lg:bg-right"
 			/>
-			<div className="min-h-screen relative container mx-auto flex items-end">
+			<div className="main-container relative container mx-auto flex items-end">
 				<div className="flex flex-col justify-center items-center text-center mb-12 md:mb-24 lg:flex-row lg:items-end lg:justify-between lg:text-left lg:mb-32 w-full">
 					<div className="max-w-[450px] mb-20 sm:mb-40 md:mb-10 lg:mb-0">
 						<h5 className="h5">SO, YOU WANT TO TRAVEL TO</h5>

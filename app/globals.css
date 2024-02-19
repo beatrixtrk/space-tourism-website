@@ -22,6 +22,15 @@
     display: none;
 }
 
+.main-container{
+    min-height: calc(100vh - 176px);
+    margin-top: 176px;
+}
+
+.technology-pagination ul{
+    flex-direction: column;
+}
+
 @media (max-width: 767px) {
 
     .hamburger-react{
@@ -61,7 +70,13 @@
         opacity: 1;
         visibility: visible;
     }
+
+    .main-container{
+        min-height: calc(100vh - 96px);
+        margin-top: 96px;
+    }
 }
+
 
 .h1{
     @apply text-white font-Bellefair text-[80px] md:text-[150px] uppercase
