@@ -29,13 +29,13 @@ const Destination = () => {
 				backgroundImage="bg-destinationMobile md:bg-destinationTablet lg:bg-destinationDesktop"
 				backgroundPositon="bg-top"
 			/>
-			{jsonData && (
-				<div className="min-h-screen relative container mx-auto flex flex-col justify-end">
-					<div className="w-full text-center lg:flex lg:justify-between">
-						<h5 className="subtitle">
-							<span>01</span>Pick your destination
-						</h5>
-					</div>
+			<div className="min-h-screen relative container mx-auto flex flex-col justify-end">
+				<div className="w-full text-center lg:flex lg:justify-between">
+					<h5 className="subtitle">
+						<span>01</span>Pick your destination
+					</h5>
+				</div>
+				{jsonData && (
 					<div className="flex items-end">
 						{jsonData.destinations &&
 							jsonData.destinations.map((destination, index) => (
@@ -129,8 +129,8 @@ const Destination = () => {
 								</div>
 							))}
 					</div>
-				</div>
-			)}
+				)}
+			</div>
 		</main>
 	);
 };

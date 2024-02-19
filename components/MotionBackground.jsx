@@ -14,7 +14,7 @@ const MotionBackground = ({ backgroundImage, backgroundPositon }) => {
 				repeatType: 'reverse',
 			}}
 			style={{
-				height: '120vh',
+				height: '130vh',
 			}}
 			className={`min-h-screen bg-no-repeat bg-cover absolute top:0 md:top-[-10%] right-0 w-full z-0 ${backgroundImage} ${backgroundPositon}`}
 		/>

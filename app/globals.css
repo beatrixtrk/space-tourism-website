@@ -23,7 +23,7 @@
 }
 
 @media (max-width: 767px) {
-    
+
     .hamburger-react{
         display: block;
     }
@@ -69,6 +69,14 @@
 
 .h2{
     @apply text-white font-Bellefair text-[36px] md:text-[80px] lg:text-[100px] uppercase
+}
+
+.h3{
+    @apply text-white font-Bellefair text-[24px] md:text-[40px] lg:text-[56px] uppercase
+}
+
+.h4{
+    @apply text-white font-Bellefair text-base md:text-[24px] lg:text-[32px] uppercase opacity-50
 }
 
 .h5{
