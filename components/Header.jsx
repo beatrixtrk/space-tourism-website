@@ -1,10 +1,21 @@
-import React from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
 import Logo from './Logo';
 import NavBar from './NavBar';
 
 const Header = () => {
+	const [scroll, setScroll] = useState(false);
+	useEffect(() => {
+		window.addEventListener('scroll', () => {
+			setScroll(window.scrollY > 10);
+		});
+	}, []);
 	return (
-		<header className="p-6 md:p-0 lg:pt-10 fixed top-0 left-0 w-full z-10">
+		<header
+			className={`p-6 md:p-0 lg:pt-10 fixed top-0 left-0 w-full z-10 ${
+				scroll ? 'bg-white bg-opacity-5 backdrop-blur-[81.55px]' : ''
+			}`}
+		>
 			<div className="flex items-center justify-between">
 				<Logo style="md:pl-10" />
 				<div className="md:bg-white md:bg-opacity-5 md:backdrop-blur-[81.55px] md:px-16 lg:pl-32 lg:pr-40 relative navbar-wrapper">
