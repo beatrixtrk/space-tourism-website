@@ -34,7 +34,7 @@ const Crew = () => {
 		fetchData();
 	}, []);
 	return (
-		<main className="h-screen overflow-hidden relative animate-appearanceIn">
+		<main className="overflow-hidden relative animate-appearanceIn">
 			<MotionBackground
 				backgroundImage="bg-crewMobile md:bg-crewTablet lg:bg-crewDesktop"
 				backgroundPositon="bg-top"
@@ -81,7 +81,7 @@ const Crew = () => {
 											src={person.images.png}
 											alt={person.name}
 										/>
-										<hr className="border-[#383B4B]" />
+										<hr className="border-[#383B4B] lg:hidden" />
 									</div>
 								</div>
 							))}

@@ -38,7 +38,7 @@ const Technology = () => {
 	}, []);
 
 	return (
-		<main className="h-screen overflow-hidden relative animate-appearanceIn">
+		<main className="overflow-hidden relative animate-appearanceIn">
 			<MotionBackground
 				backgroundImage="bg-technologyMobile md:bg-technologyTablet lg:bg-technologyDesktop"
 				backgroundPositon="bg-top"
