@@ -39,7 +39,7 @@ const Crew = () => {
 				backgroundImage="bg-crewMobile md:bg-crewTablet lg:bg-crewDesktop"
 				backgroundPositon="bg-top"
 			/>
-			<div className="main-container relative container mx-auto flex flex-col justify-between">
+			<div className="main-container relative container mx-auto flex flex-col justify-evenly lg:justify-between">
 				<div className="w-full text-center lg:flex lg:justify-between">
 					<h5 className="subtitle !mb-0">
 						<span>02</span>Meet your crew

@@ -29,7 +29,7 @@ const Destination = () => {
 				backgroundImage="bg-destinationMobile md:bg-destinationTablet lg:bg-destinationDesktop"
 				backgroundPositon="bg-top"
 			/>
-			<div className="main-container relative container mx-auto flex flex-col justify-between">
+			<div className="main-container relative container mx-auto flex flex-col justify-evenly lg:justify-between">
 				<div className="w-full text-center lg:flex lg:justify-between">
 					<h5 className="subtitle">
 						<span>01</span>Pick your destination
