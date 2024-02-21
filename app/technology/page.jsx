@@ -12,7 +12,7 @@ const Technology = () => {
 			<li
 				key={key}
 				ref={ref}
-				className={`${className} w-[40px] h-[40px] md:w-[60px] md:h-[60px] lg:w-[80px] lg:h-[80px] my-[16px] cursor-pointer border-white border font-Bellefair bg-transparent text-[24px] ${
+				className={`${className} w-[40px] h-[40px] md:w-[60px] md:h-[60px] lg:w-[80px] lg:h-[80px] mx-[8px] mb-[26px] md:mb-[44px] lg:my-[16px] lg:mx-0 cursor-pointer border-white border font-Bellefair bg-transparent text-[24px] ${
 					isActive ? 'bg-white text-dark' : 'text-white '
 				}`}
 				onClick={() => setPage(value)}
@@ -43,7 +43,7 @@ const Technology = () => {
 				backgroundImage="bg-technologyMobile md:bg-technologyTablet lg:bg-technologyDesktop"
 				backgroundPositon="bg-top"
 			/>
-			<div className="main-container relative container mx-auto flex flex-col justify-center">
+			<div className="main-container relative lg:container mx-auto flex flex-col lg:justify-between">
 				<div className="w-full text-center lg:flex lg:justify-between">
 					<h5 className="subtitle">
 						<span>03</span>SPACE LAUNCH 101
@@ -55,12 +55,12 @@ const Technology = () => {
 						{technologyData.technology &&
 							technologyData.technology.map((item, index) => (
 								<div
-									className={`flex flex-col justify-center items-center text-center mb-2 md:mb-10 lg:flex-row lg:items-center lg:justify-between lg:text-left xl:mb-32 w-full md:gap-20 ${
+									className={`flex flex-col justify-start items-center text-center mb-2 md:mb-10 lg:flex-row lg:items-center lg:justify-between lg:text-left xl:mb-32 w-full lg:gap-20 ${
 										activeTab === index ? '' : 'hidden'
 									}`}
 									key={index}
 								>
-									<div>
+									<div className="order-2 lg:order-1">
 										<Pagination
 											page={activeTab + 1}
 											onChange={handleSetActiveTab}
@@ -74,16 +74,16 @@ const Technology = () => {
 											disableCursorAnimation
 										/>
 									</div>
-									<div>
-										<span className="text-base text-light tracking-[2px] font-BarlowCondensed uppercase">
+									<div className="order-3 lg:order-2">
+										<span className="text-base text-light tracking-[2px] font-BarlowCondensed uppercase mb-3 md:mb-2">
 											The Terminology ...
 										</span>
-										<h3 className="h3">{item.name}</h3>
-										<p className="max-w-[444px] font-Barlow text-sm md:text-[15px] md:text-lg text-light ">
+										<h3 className="h3 mb-3">{item.name}</h3>
+										<p className="max-w-[444px] px-3 font-Barlow text-sm md:text-[15px] md:text-lg text-light ">
 											{item.description}
 										</p>
 									</div>
-									<div className="lg:w-[515px] lg:h-[527px]">
+									<div className="lg:w-[515px] lg:h-[527px] order-1 lg:order-3 mb-8 md:mb-14 lg:mb-0">
 										<img
 											className="mx-auto hidden lg:block object-cover w-full h-full"
 											src={item.images.portrait}
@@ -91,7 +91,7 @@ const Technology = () => {
 										/>
 										<img
 											className="mx-auto lg:hidden"
-											src={item.images.landspace}
+											src={item.images.landscape}
 											alt={item.name}
 										/>
 									</div>

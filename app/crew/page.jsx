@@ -39,10 +39,9 @@ const Crew = () => {
 				backgroundImage="bg-crewMobile md:bg-crewTablet lg:bg-crewDesktop"
 				backgroundPositon="bg-top"
 			/>
-
-			<div className="main-container relative container mx-auto flex flex-col justify-end">
+			<div className="main-container relative container mx-auto flex flex-col justify-between">
 				<div className="w-full text-center lg:flex lg:justify-between">
-					<h5 className="subtitle">
+					<h5 className="subtitle !mb-0">
 						<span>02</span>Meet your crew
 					</h5>
 				</div>
@@ -77,8 +76,8 @@ const Crew = () => {
 
 									<div className="w-[60%] lg:w-[40%] order-1 md:order-2">
 										<img
-											className="mx-auto"
-											src={person.images.png}
+											className="mx-auto max-h-[600px]"
+											src={person.images.webp}
 											alt={person.name}
 										/>
 										<hr className="border-[#383B4B] lg:hidden" />
