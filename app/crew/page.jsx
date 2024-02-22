@@ -1,11 +1,34 @@
 'use client';
-import MotionBackground from '@/components/MotionBackground';
 import { useEffect, useState } from 'react';
+import MotionBackground from '@/components/MotionBackground';
 import { Pagination } from '@nextui-org/react';
 
 const Crew = () => {
 	const [crewData, setCrewData] = useState(null);
-	const [activeTab, setActiveTab] = useState(null);
+	const [activeTab, setActiveTab] = useState(0); // Kezdetben az első fül lesz az aktív
+
+	useEffect(() => {
+		const intervalId = setInterval(() => {
+			setActiveTab((prevTab) =>
+				prevTab === crewData.crew.length - 1 ? 0 : prevTab + 1
+			);
+		}, 3000);
+
+		return () => clearInterval(intervalId);
+	}, [crewData]);
+
+	const handleSetActiveTab = (index) => {
+		setActiveTab(index);
+	};
+
+	useEffect(() => {
+		const fetchData = async () => {
+			const response = await fetch('/data.json');
+			const data = await response.json();
+			setCrewData(data);
+		};
+		fetchData();
+	}, []);
 
 	const renderItem = ({ ref, key, value, isActive, setPage, className }) => {
 		return (
@@ -20,19 +43,6 @@ const Crew = () => {
 		);
 	};
 
-	const handleSetActiveTab = (index) => {
-		setActiveTab(index - 1);
-	};
-
-	useEffect(() => {
-		setActiveTab(0);
-		const fetchData = async () => {
-			const response = await fetch('/data.json');
-			const data = await response.json();
-			setCrewData(data);
-		};
-		fetchData();
-	}, []);
 	return (
 		<main className="overflow-hidden relative animate-appearanceIn">
 			<MotionBackground

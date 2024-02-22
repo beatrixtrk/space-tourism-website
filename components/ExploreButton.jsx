@@ -12,6 +12,7 @@ const ExploreButton = () => {
 			<motion.div
 				className="absolute w-full h-full bg-white opacity-10 rounded-full"
 				whileHover={{ scale: 1.4 }}
+				whileFocus={{ scale: 1.4 }}
 				transition={{ duration: 0.3 }}
 			/>
 			Explore
