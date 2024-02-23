@@ -36,7 +36,7 @@ const Destination = () => {
 					</h5>
 				</div>
 				{destinationData && (
-					<div className="flex items-end">
+					<div className="flex items-end lg:min-h-[600px]">
 						{destinationData.destinations &&
 							destinationData.destinations.map(
 								(destination, index) => (
