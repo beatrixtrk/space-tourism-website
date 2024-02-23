@@ -12,7 +12,7 @@ const Technology = () => {
 			<li
 				key={key}
 				ref={ref}
-				className={`${className} w-[40px] h-[40px] md:w-[60px] md:h-[60px] lg:w-[80px] lg:h-[80px] mx-[8px] mb-[26px] md:mb-[44px] lg:my-[16px] lg:mx-0 cursor-pointer border-white border font-Bellefair bg-transparent !text-[24px] ${
+				className={`${className} w-[40px] h-[40px] md:w-[60px] md:h-[60px] lg:w-[80px] lg:h-[80px] mx-[8px] mb-[26px] md:mb-[44px] lg:my-[16px] lg:mx-0 cursor-pointer border-white border font-Bellefair bg-transparent !text-base md:!text-[24px] lg:!text-[32px] ${
 					isActive ? 'bg-white text-dark' : 'text-white '
 				}`}
 				onClick={() => setPage(value)}
