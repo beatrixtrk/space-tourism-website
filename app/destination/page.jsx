@@ -64,20 +64,20 @@ const Destination = () => {
 														) => (
 															<Link
 																key={`tab-${index}`}
-																className="hover:cursor-pointer relative"
+																className="hover:cursor-pointer relative pb-2 md:pb-3"
+																onClick={() =>
+																	handleSetActiveTab(
+																		index
+																	)
+																}
 															>
 																<span
-																	className={`font-BarlowCondensed uppercase text-light text-sm mb-2 md:mb-3 md:text-base tracking-[2px] md:tracking-[3px] ${
+																	className={`font-BarlowCondensed uppercase text-light text-sm md:text-base tracking-[2px] md:tracking-[3px] ${
 																		activeTab ===
 																		index
 																			? 'active text-white'
 																			: ''
 																	}`}
-																	onClick={() =>
-																		handleSetActiveTab(
-																			index
-																		)
-																	}
 																>
 																	{
 																		destination.name

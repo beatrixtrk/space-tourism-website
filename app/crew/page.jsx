@@ -61,7 +61,7 @@ const Crew = () => {
 										<h5 className="subtitle lg:mb-28"></h5>
 										<h4 className="h4">{person.role}</h4>
 										<h3 className="h3">{person.name}</h3>
-										<p className="max-w-[444px] font-Barlow text-sm md:text-[15px] md:text-lg text-light mb-8 md:mb-12 lg:mb-28">
+										<p className="max-w-[444px] min-h-[100px] md:min-h-[140px] font-Barlow text-sm md:text-[15px] md:text-lg text-light mb-8 md:mb-12 lg:mb-28 ">
 											{person.bio}
 										</p>
 										<Pagination
@@ -76,9 +76,9 @@ const Crew = () => {
 										/>
 									</div>
 
-									<div className="w-[60%] lg:w-[40%] order-1 md:order-2">
+									<div className="w-[60%] lg:w-[40%] max-h-[600px] min-h-[305px] lg:min-h-[600px] h-100 order-1 md:order-2 flex">
 										<img
-											className="mx-auto max-h-[600px]"
+											className="mx-auto mb-0 mt-auto"
 											src={person.images.webp}
 											alt={person.name}
 										/>

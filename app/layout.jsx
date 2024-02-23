@@ -11,9 +11,12 @@ const barlow_condensed = Barlow_Condensed({
 const bellefair = Bellefair({ subsets: ['latin'], weight: ['400'] });
 
 export const metadata = {
+	metadataBase: new URL('http://localhost:3000'),
 	title: 'Space Tourism Website',
 	description: 'Frontend Mentor Project',
 	openGraph: {
+		title: 'Space Tourism Website',
+		description: 'Frontend Mentor Project',
 		images: 'shared/space-tourism-og.png',
 	},
 };
