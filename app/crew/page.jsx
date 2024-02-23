@@ -5,20 +5,10 @@ import { Pagination } from '@nextui-org/react';
 
 const Crew = () => {
 	const [crewData, setCrewData] = useState(null);
-	const [activeTab, setActiveTab] = useState(0); // Kezdetben az első fül lesz az aktív
-
-	useEffect(() => {
-		const intervalId = setInterval(() => {
-			setActiveTab((prevTab) =>
-				prevTab === crewData.crew.length - 1 ? 0 : prevTab + 1
-			);
-		}, 3000);
-
-		return () => clearInterval(intervalId);
-	}, [crewData]);
+	const [activeTab, setActiveTab] = useState(0);
 
 	const handleSetActiveTab = (index) => {
-		setActiveTab(index);
+		setActiveTab(index - 1);
 	};
 
 	useEffect(() => {
@@ -35,8 +25,8 @@ const Crew = () => {
 			<li
 				key={key}
 				ref={ref}
-				className={`w-[15px] h-[15px] mx-[12px] lg:mr-[24px] lg:ml-0 cursor-pointer ${className} ${
-					isActive ? 'bg-white' : 'opacity-10'
+				className={`relative w-[15px] h-[15px] mx-[12px] lg:mr-[24px] lg:ml-0 cursor-pointer !overflow-visible ${className} before:absolute before:inline-flex before:h-full before:w-full before:bg-white before:rounded-full ${
+					isActive ? 'bg-white before:animate-ping' : 'opacity-10'
 				}`}
 				onClick={() => setPage(value)}
 			></li>
