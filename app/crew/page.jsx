@@ -26,7 +26,9 @@ const Crew = () => {
 				key={key}
 				ref={ref}
 				className={`relative w-[15px] h-[15px] mx-[12px] lg:mr-[24px] lg:ml-0 cursor-pointer !overflow-visible ${className} before:absolute before:inline-flex before:h-full before:w-full before:bg-white before:rounded-full ${
-					isActive ? 'bg-white before:animate-ping' : 'opacity-10'
+					isActive
+						? 'bg-white before:animate-ping'
+						: 'opacity-10 hover:opacity-50'
 				}`}
 				onClick={() => setPage(value)}
 			></li>
