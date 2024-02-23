@@ -64,6 +64,9 @@ const Destination = () => {
 														) => (
 															<Link
 																key={`tab-${index}`}
+																aria-label={
+																	destination.name
+																}
 																className="hover:cursor-pointer relative pb-2 md:pb-3"
 																onClick={() =>
 																	handleSetActiveTab(

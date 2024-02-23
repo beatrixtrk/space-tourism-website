@@ -2,7 +2,7 @@ import { Image, Link } from '@nextui-org/react';
 
 const Logo = ({ style }) => {
 	return (
-		<Link className={`${style}`} href="/">
+		<Link className={`${style}`} href="/" aria-label="Home Page">
 			<Image
 				src="/shared/logo.svg"
 				width={48}

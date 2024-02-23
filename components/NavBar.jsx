@@ -52,6 +52,7 @@ const NavBar = ({ containerStyle, linkStyle, underlineStyle }) => {
 							className={`${linkStyle}`}
 							href={page.path}
 							key={`nav-${index}`}
+							aria-label={page.name}
 						>
 							<span className="flex md:hidden lg:flex pr-3 font-bold">
 								{page.id}
