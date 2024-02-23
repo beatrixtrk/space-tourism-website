@@ -79,7 +79,7 @@ const Technology = () => {
 											The Terminology ...
 										</span>
 										<h3 className="h3 mb-3">{item.name}</h3>
-										<p className="max-w-[444px] px-3 font-Barlow text-sm md:text-[15px] md:text-lg text-light ">
+										<p className="max-w-[444px] px-3 font-Barlow text-sm md:text-[15px] md:text-lg text-light tracking-[1px]">
 											{item.description}
 										</p>
 									</div>

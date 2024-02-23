@@ -61,7 +61,7 @@ const Crew = () => {
 										<h5 className="subtitle lg:mb-28"></h5>
 										<h4 className="h4">{person.role}</h4>
 										<h3 className="h3">{person.name}</h3>
-										<p className="max-w-[444px] min-h-[100px] md:min-h-[140px] font-Barlow text-sm md:text-[15px] md:text-lg text-light mb-8 md:mb-12 lg:mb-28 ">
+										<p className="max-w-[444px] min-h-[100px] md:min-h-[140px] font-Barlow text-sm md:text-[15px] md:text-lg text-light mb-8 md:mb-12 lg:mb-28 tracking-[1px]">
 											{person.bio}
 										</p>
 										<Pagination

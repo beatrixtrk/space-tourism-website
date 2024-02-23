@@ -34,7 +34,7 @@ const Header = () => {
 					></span>
 					<NavBar
 						containerStyle="block md:flex md:gap-x-10 lg:gap-x-16"
-						linkStyle="text-white font-BarlowCondensed uppercase text-sm lg:text-base relative md:py-8 lg:py-9"
+						linkStyle="text-white font-BarlowCondensed uppercase tracking-[2px] text-sm lg:text-base relative md:py-8 lg:py-9"
 						underlineStyle="absolute left-0 top-[calc(100%-2px)] h-[2px] bg-white w-full"
 					/>
 				</div>

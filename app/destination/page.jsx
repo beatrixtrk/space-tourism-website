@@ -107,7 +107,7 @@ const Destination = () => {
 											<h2 className="h2">
 												{destination.name}
 											</h2>
-											<p className="font-Barlow text-sm md:text-[15px] md:text-lg text-light mb-8 md:mb-12 lg:mb-14">
+											<p className="font-Barlow text-sm md:text-[15px] md:text-lg text-light mb-8 md:mb-12 lg:mb-14 tracking-[1px]">
 												{destination.description}
 											</p>
 											<hr className="border-[#383B4B] mb-8 md:mb-7" />
